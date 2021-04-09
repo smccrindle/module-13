@@ -74,8 +74,8 @@
 					section.removeChild(section.firstChild);
 			}
 			// STEP 6: Create the var articles to capture the articles from the JSON object
+			let articles = json.response.docs;
 			
-
 		  if(articles.length === 0) {
 		    var para = document.createElement('p');
 		    para.textContent = 'No results returned.'
