@@ -24,11 +24,16 @@
       // STEP 4: Build a DOM loaded event listener (using an ECMAScript fat arrow for the anonymous function)
       window.addEventListener("load", (event) => {
         // STEP 5a: Get an API key from MapQuest
-        console.log("Page is loaded!");
         // STEP 5b: Add the mapquest.key property to var 'L'
-        
+        L.mapquest.key = "BfvIO8ANKfgfgwNilalGWxL8ITSRJan4";
+
         // STEP 6a: Create a var representing the actual map, using the mapquest.map method - the first parameter is the ID of the HTML element to contain the map
-        
+        let map = L.mapquest.map("map", {
+          center: [44.414809, -79.667755],
+          layers: L.mapquest.tileLayer("map"),
+          zoom: 13
+        });
+
         // STEP 7: The second parameter of the above method accepts an object - let's set the center, layers, and zoom levels
         // STEP 7a: Get the lat/lng for your address at https://developer.mapquest.com/documentation/tools/latitude-longitude-finder/
         // STEP 7b: Add the map tileLayer (raster map image tiles), and test the map out in the browser...
